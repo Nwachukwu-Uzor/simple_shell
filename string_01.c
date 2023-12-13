@@ -23,7 +23,8 @@ int _strlen(char *_str)
  *@str_1: str 0ne
  *@str_2: str two
  *
- *Return: negative if str_1<str_2, positive if str_1 > str_2, zero if str_1 == str_2
+ *Return: negative if str_1<str_2, positive if str_1 >
+ *str_2, zero if str_1 == str_2
  */
 int _strcmp(char *str_1, char *str_2)
 {
@@ -38,7 +39,7 @@ int _strcmp(char *str_1, char *str_2)
 	if (*str_1 == *str_2)
 		return (0);
 	else
-		return (*str_1<*str_2 ? -1 : 1);
+		return (*str_1 < *str_2 ? -1 : 1);
 }
 
 /**
@@ -53,7 +54,7 @@ char *starts_with(const char *_stack, const char *_train)
 	while (*_train)
 		if (*_train++ != *_stack++)
 			return (NULL);
-	return ((char*) _stack);
+	return ((char *) _stack);
 }
 
 /**
