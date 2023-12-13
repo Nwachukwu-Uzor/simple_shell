@@ -1,4 +1,4 @@
-#include "shell.first_node"
+#include "shell.h"
 
 /**
  *calculate_list_length - function that shows the length of the linked list
