@@ -8,7 +8,7 @@
  *
  *Return: size of list
  */
-list_type *add_node(list_type **_head, const char *str, int numb)
+list_typ *add_node(list_type **_head, const char *str, int numb)
 {
 	list_type *newest_head;
 
@@ -18,7 +18,7 @@ list_type *add_node(list_type **_head, const char *str, int numb)
 	if (!newest_head)
 		return (NULL);
 	_memset((void *) newest_head, 0, sizeof(list_type));
-	newest_head->numb = numb;
+	newest_head->num = numb;
 	if (str)
 	{
 		newest_head->str = _strdup(str);
@@ -46,7 +46,7 @@ list_type *append_node(list_type **_head, const char *str, int numb)
 {
 	list_type *new_node, *node;
 
-	if (!head)
+	if (!_head)
 		return (NULL);
 
 	node = *_head;
@@ -54,7 +54,7 @@ list_type *append_node(list_type **_head, const char *str, int numb)
 	if (!new_node)
 		return (NULL);
 	_memset((void *) new_node, 0, sizeof(list_type));
-	new_node->numb = numb;
+	new_node->num = numb;
 	if (str)
 	{
 		new_node->str = _strdup(str);

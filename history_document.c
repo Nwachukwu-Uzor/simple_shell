@@ -48,7 +48,7 @@ int add_to_history_file(info_type *mssg)
 		_print_standard_string(node->str, fd);
 		_print_file_char('\n', fd);
 	}
-	_print_file_char(buffFER_FLUSH_STATUS, fd);
+	_print_file_char(BUFFER_FLUSH_STATUS, fd);
 	close(fd);
 	return (1);
 }
