@@ -8,8 +8,7 @@
  */
 int main(int ac, char **av)
 {
-	info_type info[] = { INIT_INFO
-	};
+	info_type info[] = { INIT_INFO };
 
 	int file_descriptor = 2;
 

@@ -95,10 +95,9 @@ typedef struct info_struct
 
 info_type;
 
-#define INIT_INFO
-{
-	NULL, NULL, NULL, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL,
-	0, 0, 0
+#define INIT_INFO {\
+	NULL, NULL, NULL, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, \
+	0, 0, 0\
 }
 
 /**
