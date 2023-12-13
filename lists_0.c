@@ -8,7 +8,7 @@
  *
  *Return: size of list
  */
-list_typ *add_node(list_type **_head, const char *str, int numb)
+list_type *add_node(list_type **_head, const char *str, int numb)
 {
 	list_type *newest_head;
 

@@ -102,7 +102,7 @@ void retrieve_cmd(info_type *args)
 	char *_path = NULL;
 	int count, counter;
 
-	args->_path = args->argv[0];
+	args->path = args->argv[0];
 	if (args->linenumber_tag == 1)
 	{
 		args->line_number++;
@@ -118,7 +118,7 @@ void retrieve_cmd(info_type *args)
 	_path = compute_path(args, _get_env(args, "PATH="), args->argv[0]);
 	if (_path)
 	{
-		args->_path = _path;
+		args->path = _path;
 		command_fork(args);
 	}
 	else
@@ -155,7 +155,7 @@ void command_fork(info_type *args)
 
 	if (sub_child == 0)
 	{
-		if (execve(args->_path, args->argv, get_environment_variables(args)) == -1)
+		if (execve(args->path, args->argv, get_environment_variables(args)) == -1)
 		{
 			free_info_type(args, 1);
 			if (errno == EACCES)

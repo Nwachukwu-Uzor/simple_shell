@@ -76,7 +76,7 @@ ssize_t _extract_inputs(info_type *args)
 		if (i >= len)
 		{
 			i = len = 0;
-			args->cmd_buffer_type = CMD_NORM;
+			args->cmd_buffer_type = CHAIN_NORM;
 		}
 
 		*buf_p = pointer;
